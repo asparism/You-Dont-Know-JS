@@ -16,7 +16,7 @@ Let's demonstrate call-stack and call-site:
 ```js
 function baz() {
     // call-stack is: `baz`
-    // so, our call-site is in the global scope
+    // so, the `baz` call-site is in the global scope
 
     console.log( "baz" );
     bar(); // <-- call-site for `bar`
@@ -24,7 +24,7 @@ function baz() {
 
 function bar() {
     // call-stack is: `baz` -> `bar`
-    // so, our call-site is in `baz`
+    // so, the call-site for `bar` is in `baz`
 
     console.log( "bar" );
     foo(); // <-- call-site for `foo`
@@ -32,7 +32,7 @@ function bar() {
 
 function foo() {
     // call-stack is: `baz` -> `bar` -> `foo`
-    // so, our call-site is in `bar`
+    // so, the call-site for `foo` is in `bar`
 
     console.log( "foo" );
 }
